@@ -30,5 +30,14 @@ game *game_init()
 
 	game = malloc(sizeof(game));
 	memset(game->board, '0', 20);
-	
+	memset(game->player1.piece_state, '0', 7);
+	memset(game->player2.piece_state, '0', 7);
+
+	game->num = 1;
+	game->turn = 1;
+	game->player1.pieces = 7;
+	game->player2.pieces = 7;
+
+	return game;
 }
+

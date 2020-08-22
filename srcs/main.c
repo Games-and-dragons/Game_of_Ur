@@ -1,8 +1,11 @@
-#include "SDL_Master.h"
+#include "ur.h"
+
 
 int main()
 {
-	Display *display;
-	display = display_init();
-	update(display);
+	game *game;
+
+	game = game_init();
+	game->display = display_init();
+	update(game);
 }

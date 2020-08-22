@@ -1,7 +1,7 @@
 NAME = Ur
 FLAGS = -g #Compile flags -Wall -Wextra -Werror
 
-FILENAMES = main display_init reference_texture update
+FILENAMES = main display_init reference_texture update render
 INCL = -I incl/
 LIB = -L ~/.brew/lib -l SDL2 -l sdl2_image
 
@@ -30,4 +30,7 @@ push : clean
 
 re : fclean all
 
-.PHONY : $(NAME) clean fclean push re
+play : re
+	./$(NAME)
+
+.PHONY : $(NAME) clean fclean push re play
